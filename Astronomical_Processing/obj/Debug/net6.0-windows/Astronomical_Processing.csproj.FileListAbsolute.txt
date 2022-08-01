@@ -1,0 +1,7 @@
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\obj\Debug\net6.0-windows\Astronomical_Processing.csproj.AssemblyReference.cache
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\obj\Debug\net6.0-windows\Astronomical_Processing.Astronomical_Processing.resources
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\obj\Debug\net6.0-windows\Astronomical_Processing.csproj.GenerateResource.cache
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\obj\Debug\net6.0-windows\Astronomical_Processing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\obj\Debug\net6.0-windows\Astronomical_Processing.AssemblyInfoInputs.cache
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\obj\Debug\net6.0-windows\Astronomical_Processing.AssemblyInfo.cs
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\obj\Debug\net6.0-windows\Astronomical_Processing.csproj.CoreCompileInputs.cache

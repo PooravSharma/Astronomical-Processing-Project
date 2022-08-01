@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownSigma = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownMu = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label_Mu = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -68,25 +68,55 @@
             this.textBox_BSelectionSort = new System.Windows.Forms.TextBox();
             this.textBox_BInsertionSort = new System.Windows.Forms.TextBox();
             this.listBox_SensorB = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSigma)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMu)).BeginInit();
             this.SuspendLayout();
             // 
-            // numericUpDown1
+            // numericUpDownSigma
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(26, 35);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(56, 23);
-            this.numericUpDown1.TabIndex = 0;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownSigma.Location = new System.Drawing.Point(26, 35);
+            this.numericUpDownSigma.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numericUpDownSigma.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownSigma.Name = "numericUpDownSigma";
+            this.numericUpDownSigma.Size = new System.Drawing.Size(56, 23);
+            this.numericUpDownSigma.TabIndex = 0;
+            this.numericUpDownSigma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownSigma.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
-            // numericUpDown2
+            // numericUpDownMu
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(110, 35);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(56, 23);
-            this.numericUpDown2.TabIndex = 0;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownMu.Location = new System.Drawing.Point(110, 35);
+            this.numericUpDownMu.Maximum = new decimal(new int[] {
+            75,
+            0,
+            0,
+            0});
+            this.numericUpDownMu.Minimum = new decimal(new int[] {
+            35,
+            0,
+            0,
+            0});
+            this.numericUpDownMu.Name = "numericUpDownMu";
+            this.numericUpDownMu.Size = new System.Drawing.Size(56, 23);
+            this.numericUpDownMu.TabIndex = 0;
+            this.numericUpDownMu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownMu.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             // 
             // label1
             // 
@@ -174,6 +204,7 @@
             this.button_ASearchIterative.TabIndex = 4;
             this.button_ASearchIterative.Text = "Search";
             this.button_ASearchIterative.UseVisualStyleBackColor = true;
+            this.button_ASearchIterative.Click += new System.EventHandler(this.button_ASearchIterative_Click);
             // 
             // textBox_ASearchIterative
             // 
@@ -272,6 +303,7 @@
             this.textBox_ATarget.Name = "textBox_ATarget";
             this.textBox_ATarget.Size = new System.Drawing.Size(40, 23);
             this.textBox_ATarget.TabIndex = 5;
+            this.textBox_ATarget.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_ATarget_TextChanged);
             // 
             // listBox_SensorA
             // 
@@ -335,6 +367,7 @@
             this.button_BSearchIterative.TabIndex = 4;
             this.button_BSearchIterative.Text = "Search";
             this.button_BSearchIterative.UseVisualStyleBackColor = true;
+            this.button_BSearchIterative.Click += new System.EventHandler(this.button_BSearchIterative_Click);
             // 
             // button_BSearchRecursive
             // 
@@ -383,6 +416,7 @@
             this.textBox_BTarget.Name = "textBox_BTarget";
             this.textBox_BTarget.Size = new System.Drawing.Size(40, 23);
             this.textBox_BTarget.TabIndex = 5;
+            this.textBox_BTarget.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_BTarget_TextChanged);
             // 
             // textBox_BSelectionSort
             // 
@@ -448,13 +482,12 @@
             this.Controls.Add(this.label_BSearchIterative);
             this.Controls.Add(this.label_ASearchIterative);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericUpDownMu);
+            this.Controls.Add(this.numericUpDownSigma);
             this.Name = "Astronomical_Processing";
             this.Text = "Astronomical_Processing";
-            this.Load += new System.EventHandler(this.Astronomical_Processing_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSigma)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,8 +495,8 @@
 
         #endregion
 
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
+        private NumericUpDown numericUpDownSigma;
+        private NumericUpDown numericUpDownMu;
         private Label label1;
         private Label label_Mu;
         private ListView listView1;
