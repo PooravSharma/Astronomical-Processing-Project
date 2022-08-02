@@ -32,7 +32,7 @@
             this.numericUpDownMu = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label_Mu = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listView = new System.Windows.Forms.ListView();
             this.column_SensorA = new System.Windows.Forms.ColumnHeader();
             this.column_SensorB = new System.Windows.Forms.ColumnHeader();
             this.button_LoadSensorData = new System.Windows.Forms.Button();
@@ -136,17 +136,17 @@
             this.label_Mu.TabIndex = 1;
             this.label_Mu.Text = "Mu";
             // 
-            // listView1
+            // listView
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.column_SensorA,
             this.column_SensorB});
-            this.listView1.Location = new System.Drawing.Point(27, 104);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(140, 379);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView.Location = new System.Drawing.Point(27, 104);
+            this.listView.Name = "listView";
+            this.listView.Size = new System.Drawing.Size(140, 379);
+            this.listView.TabIndex = 2;
+            this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView.View = System.Windows.Forms.View.Details;
             // 
             // column_SensorA
             // 
@@ -230,6 +230,7 @@
             this.button_ASearchRecursive.TabIndex = 4;
             this.button_ASearchRecursive.Text = "Search";
             this.button_ASearchRecursive.UseVisualStyleBackColor = true;
+            this.button_ASearchRecursive.Click += new System.EventHandler(this.button_ASearchRecursive_Click);
             // 
             // textBox_ASearchRecursive
             // 
@@ -255,6 +256,7 @@
             this.button_ASelectionSort.TabIndex = 4;
             this.button_ASelectionSort.Text = "Sort";
             this.button_ASelectionSort.UseVisualStyleBackColor = true;
+            this.button_ASelectionSort.Click += new System.EventHandler(this.button_ASelectionSort_Click);
             // 
             // textBox_ASelectionSort
             // 
@@ -280,6 +282,7 @@
             this.button_AInsertionSort.TabIndex = 4;
             this.button_AInsertionSort.Text = "Sort";
             this.button_AInsertionSort.UseVisualStyleBackColor = true;
+            this.button_AInsertionSort.Click += new System.EventHandler(this.button_AInsertionSort_Click);
             // 
             // textBox_AInsertionSort
             // 
@@ -377,6 +380,7 @@
             this.button_BSearchRecursive.TabIndex = 4;
             this.button_BSearchRecursive.Text = "Search";
             this.button_BSearchRecursive.UseVisualStyleBackColor = true;
+            this.button_BSearchRecursive.Click += new System.EventHandler(this.button_BSearchRecursive_Click);
             // 
             // button_BSelectionSort
             // 
@@ -386,6 +390,7 @@
             this.button_BSelectionSort.TabIndex = 4;
             this.button_BSelectionSort.Text = "Sort";
             this.button_BSelectionSort.UseVisualStyleBackColor = true;
+            this.button_BSelectionSort.Click += new System.EventHandler(this.button_BSelectionSort_Click);
             // 
             // button_BInsertionSort
             // 
@@ -395,6 +400,7 @@
             this.button_BInsertionSort.TabIndex = 4;
             this.button_BInsertionSort.Text = "Sort";
             this.button_BInsertionSort.UseVisualStyleBackColor = true;
+            this.button_BInsertionSort.Click += new System.EventHandler(this.button_BInsertionSort_Click);
             // 
             // textBox_BSearchIterative
             // 
@@ -467,7 +473,7 @@
             this.Controls.Add(this.button_BSearchIterative);
             this.Controls.Add(this.button_ASearchIterative);
             this.Controls.Add(this.button_LoadSensorData);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listView);
             this.Controls.Add(this.label_Mu);
             this.Controls.Add(this.label_SensorB);
             this.Controls.Add(this.label_BInsertionSort);
@@ -499,7 +505,7 @@
         private NumericUpDown numericUpDownMu;
         private Label label1;
         private Label label_Mu;
-        private ListView listView1;
+        private ListView listView;
         private ColumnHeader column_SensorA;
         private ColumnHeader column_SensorB;
         private Button button_LoadSensorData;
