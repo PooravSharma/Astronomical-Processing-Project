@@ -5,3 +5,14 @@ C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astr
 C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\obj\Debug\net6.0-windows\Astronomical_Processing.AssemblyInfoInputs.cache
 C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\obj\Debug\net6.0-windows\Astronomical_Processing.AssemblyInfo.cs
 C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\obj\Debug\net6.0-windows\Astronomical_Processing.csproj.CoreCompileInputs.cache
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\bin\Debug\net6.0-windows\Astronomical_Processing.exe
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\bin\Debug\net6.0-windows\Astronomical_Processing.deps.json
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\bin\Debug\net6.0-windows\Astronomical_Processing.runtimeconfig.json
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\bin\Debug\net6.0-windows\Astronomical_Processing.dll
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\bin\Debug\net6.0-windows\Astronomical_Processing.pdb
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\obj\Debug\net6.0-windows\Astronomical_Processing.csproj.CopyComplete
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\obj\Debug\net6.0-windows\Astronomical_Processing.dll
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\obj\Debug\net6.0-windows\refint\Astronomical_Processing.dll
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\obj\Debug\net6.0-windows\Astronomical_Processing.pdb
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\obj\Debug\net6.0-windows\Astronomical_Processing.genruntimeconfig.cache
+C:\Users\30045900\Source\Repos\PooravSharma\Astronomical-Processing-Project\Astronomical_Processing\obj\Debug\net6.0-windows\ref\Astronomical_Processing.dll

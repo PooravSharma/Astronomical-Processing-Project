@@ -1,24 +1,33 @@
 using Galileo;
-
+using System.Diagnostics;
 
 namespace Astronomical_Processing
 {
     public partial class Astronomical_Processing : Form
     {
+        Stopwatch stopWatch = new Stopwatch();
         public Astronomical_Processing()
         {
             InitializeComponent();
+            textBox_ASearchIterative.Enabled = false;
+            textBox_BSearchIterative.Enabled = false;
+            textBox_ASearchRecursive.Enabled = false;
+            textBox_BSearchRecursive.Enabled = false;
+            textBox_ASelectionSort.Enabled = false;
+            textBox_BSelectionSort.Enabled = false;
+            textBox_AInsertionSort.Enabled = false;
+            textBox_BInsertionSort.Enabled = false;
         }
         LinkedList<double> sensorA = new LinkedList<double>();
         LinkedList<double> sensorB = new LinkedList<double>();
-
-
+        // textBox_ASearchIterative.Enabled = false;
+        
         #region GUI connections
 
         //4.14	Add two textboxes for the search value; one for each sensor, ensure only numeric values can be entered.
         private void textBox_ATarget_TextChanged(object sender, KeyPressEventArgs e)
         {
-            FilterTarget(e);
+            FilterTarget(e); 
         }
 
         //4.14	Add two textboxes for the search value; one for each sensor, ensure only numeric values can be entered.
@@ -29,43 +38,76 @@ namespace Astronomical_Processing
 
         private void button_ASearchIterative_Click(object sender, EventArgs e)
         {
+            stopWatch.Start();
             BinarySearchIterative(numAnord(), sensorA, Convert.ToDouble(textBox_ATarget.Text), listBox_SensorA, textBox_ATarget);
-
+            stopWatch.Stop();
+            textBox_ASearchIterative.Text = stopWatch.Elapsed.ToString();
         }
 
         private void button_BSearchIterative_Click(object sender, EventArgs e)
         {
+            stopWatch.Start();
             BinarySearchIterative(numBnord(), sensorB, Convert.ToDouble(textBox_BTarget.Text), listBox_SensorB, textBox_BTarget);
+            stopWatch.Stop();
+            textBox_BSearchIterative.Text = stopWatch.Elapsed.ToString();
         }
 
         private void button_ASearchRecursive_Click(object sender, EventArgs e)
-        {
+        {   stopWatch.Start();
             BinarySearchRecursive(0, numAnord(), sensorA, Convert.ToDouble(textBox_ATarget.Text), listBox_SensorA, textBox_ATarget);
+            stopWatch.Stop();
+            textBox_ASearchRecursive.Text = stopWatch.Elapsed.ToString();
         }
 
         private void button_BSearchRecursive_Click(object sender, EventArgs e)
         {
+            stopWatch.Start();
             BinarySearchRecursive(0, numBnord(), sensorB, Convert.ToDouble(textBox_BTarget.Text), listBox_SensorB, textBox_BTarget);
+            stopWatch.Stop();
+            textBox_BSearchRecursive.Text = stopWatch.Elapsed.ToString();
         }
 
         private void button_ASelectionSort_Click(object sender, EventArgs e)
         {
+            stopWatch.Start();
             SelectionSort(numAnord(), sensorA);
+            stopWatch.Stop();
+            textBox_ASelectionSort.Text = stopWatch.Elapsed.ToString();
         }
 
         private void button_BSelectionSort_Click(object sender, EventArgs e)
         {
+            stopWatch.Start();
             SelectionSort(numBnord(), sensorB);
+            stopWatch.Stop();
+            textBox_BSelectionSort.Text = stopWatch.Elapsed.ToString();
         }
         private void button_AInsertionSort_Click(object sender, EventArgs e)
         {
+            stopWatch.Start();
             InsertionSort(numAnord(), sensorA);
+            stopWatch.Stop();
+            textBox_AInsertionSort.Text = stopWatch.Elapsed.ToString();
         }
 
         private void button_BInsertionSort_Click(object sender, EventArgs e)
         {
+            stopWatch.Start();
             InsertionSort(numBnord(), sensorB);
+            stopWatch.Stop();
+            textBox_BInsertionSort.Text = stopWatch.Elapsed.ToString();
         }
+        private void button_LoadSensorData_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+        private void textBox_ASearchIterative_TextChanged(object sender, EventArgs e)
+        {
+            
+            
+            textBox_ASearchIterative.Enabled = false;
+        }
+       
         #endregion
 
 
@@ -81,20 +123,25 @@ namespace Astronomical_Processing
             for (int i = 0; i < max; i++)
             {
                 sensorA.AddLast(readData.SensorA(sigma, mu));
-                sensorA.AddLast(readData.SensorB(sigma, mu));
+                sensorB.AddLast(readData.SensorB(sigma, mu));
             }
             DisplayListBoxData(sensorA, listBox_SensorA);
             DisplayListBoxData(sensorB, listBox_SensorB);
+            ShowAllSensorData();
         }
 
         private void ShowAllSensorData()
         {
             listView.Items.Clear();
+            
             for (int i = 0; i < listBox_SensorA.Items.Count; i++)
             {
-              //  listView item = new ListView(listBox_SensorA);
-                //listViewAdd(listBox_SensorA.Items[i].ToString());
+                ListViewItem item = new ListViewItem(listBox_SensorA.Items[i].ToString());
+                item.SubItems.Add(listBox_SensorB.Items[i].ToString());
+                listView.Items.Add(item);
+                
             }
+            
         }
         private void DisplayListBoxData(LinkedList<double> list, ListBox listBox)
         {
@@ -267,9 +314,11 @@ namespace Astronomical_Processing
 
 
 
+
+
         #endregion
 
-
+      
     }
 
 }

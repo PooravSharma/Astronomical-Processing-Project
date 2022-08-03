@@ -141,7 +141,7 @@
             this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.column_SensorA,
             this.column_SensorB});
-            this.listView.Location = new System.Drawing.Point(27, 104);
+            this.listView.Location = new System.Drawing.Point(26, 104);
             this.listView.Name = "listView";
             this.listView.Size = new System.Drawing.Size(140, 379);
             this.listView.TabIndex = 2;
@@ -166,6 +166,7 @@
             this.button_LoadSensorData.TabIndex = 3;
             this.button_LoadSensorData.Text = "Load Sensor Data";
             this.button_LoadSensorData.UseVisualStyleBackColor = true;
+            this.button_LoadSensorData.Click += new System.EventHandler(this.button_LoadSensorData_Click);
             // 
             // label_SensorA
             // 
@@ -212,6 +213,7 @@
             this.textBox_ASearchIterative.Name = "textBox_ASearchIterative";
             this.textBox_ASearchIterative.Size = new System.Drawing.Size(100, 23);
             this.textBox_ASearchIterative.TabIndex = 5;
+            this.textBox_ASearchIterative.TextChanged += new System.EventHandler(this.textBox_ASearchIterative_TextChanged);
             // 
             // label_ASearchRecursive
             // 
@@ -238,6 +240,7 @@
             this.textBox_ASearchRecursive.Name = "textBox_ASearchRecursive";
             this.textBox_ASearchRecursive.Size = new System.Drawing.Size(100, 23);
             this.textBox_ASearchRecursive.TabIndex = 5;
+
             // 
             // label_ASelectionSort
             // 
@@ -264,6 +267,7 @@
             this.textBox_ASelectionSort.Name = "textBox_ASelectionSort";
             this.textBox_ASelectionSort.Size = new System.Drawing.Size(100, 23);
             this.textBox_ASelectionSort.TabIndex = 5;
+       
             // 
             // label_AInsertionSort
             // 
@@ -290,6 +294,7 @@
             this.textBox_AInsertionSort.Name = "textBox_AInsertionSort";
             this.textBox_AInsertionSort.Size = new System.Drawing.Size(100, 23);
             this.textBox_AInsertionSort.TabIndex = 5;
+       
             // 
             // label_ASearchTarget
             // 
@@ -408,6 +413,7 @@
             this.textBox_BSearchIterative.Name = "textBox_BSearchIterative";
             this.textBox_BSearchIterative.Size = new System.Drawing.Size(100, 23);
             this.textBox_BSearchIterative.TabIndex = 5;
+           
             // 
             // textBox_BSearchRecursive
             // 
@@ -415,6 +421,7 @@
             this.textBox_BSearchRecursive.Name = "textBox_BSearchRecursive";
             this.textBox_BSearchRecursive.Size = new System.Drawing.Size(100, 23);
             this.textBox_BSearchRecursive.TabIndex = 5;
+           
             // 
             // textBox_BTarget
             // 
@@ -430,6 +437,7 @@
             this.textBox_BSelectionSort.Name = "textBox_BSelectionSort";
             this.textBox_BSelectionSort.Size = new System.Drawing.Size(100, 23);
             this.textBox_BSelectionSort.TabIndex = 5;
+       
             // 
             // textBox_BInsertionSort
             // 
@@ -437,6 +445,7 @@
             this.textBox_BInsertionSort.Name = "textBox_BInsertionSort";
             this.textBox_BInsertionSort.Size = new System.Drawing.Size(100, 23);
             this.textBox_BInsertionSort.TabIndex = 5;
+          
             // 
             // listBox_SensorB
             // 
