@@ -73,6 +73,7 @@ namespace Astronomical_Processing
             SelectionSort(numAnord(), sensorA);
             stopWatch.Stop();
             textBox_ASelectionSort.Text = stopWatch.Elapsed.ToString();
+            ShowAllSensorData();
         }
 
         private void button_BSelectionSort_Click(object sender, EventArgs e)
@@ -81,6 +82,7 @@ namespace Astronomical_Processing
             SelectionSort(numBnord(), sensorB);
             stopWatch.Stop();
             textBox_BSelectionSort.Text = stopWatch.Elapsed.ToString();
+            ShowAllSensorData();
         }
         private void button_AInsertionSort_Click(object sender, EventArgs e)
         {
@@ -88,6 +90,7 @@ namespace Astronomical_Processing
             InsertionSort(numAnord(), sensorA);
             stopWatch.Stop();
             textBox_AInsertionSort.Text = stopWatch.Elapsed.ToString();
+            ShowAllSensorData();
         }
 
         private void button_BInsertionSort_Click(object sender, EventArgs e)
@@ -96,6 +99,7 @@ namespace Astronomical_Processing
             InsertionSort(numBnord(), sensorB);
             stopWatch.Stop();
             textBox_BInsertionSort.Text = stopWatch.Elapsed.ToString();
+            ShowAllSensorData();
         }
         private void button_LoadSensorData_Click(object sender, EventArgs e)
         {
@@ -114,6 +118,7 @@ namespace Astronomical_Processing
         #region Methods
         private void LoadData()
         {
+           
             sensorA.Clear();
             sensorB.Clear();    
             ReadData readData = new ReadData();
@@ -122,16 +127,17 @@ namespace Astronomical_Processing
             double mu = (double)numericUpDownMu.Value;
             for (int i = 0; i < max; i++)
             {
-                sensorA.AddLast(readData.SensorA(sigma, mu));
-                sensorB.AddLast(readData.SensorB(sigma, mu));
+                sensorA.AddLast((double)readData.SensorA(mu, sigma));
+                sensorB.AddLast((double)readData.SensorB(mu, sigma));
             }
-            DisplayListBoxData(sensorA, listBox_SensorA);
-            DisplayListBoxData(sensorB, listBox_SensorB);
+         
             ShowAllSensorData();
         }
 
         private void ShowAllSensorData()
         {
+            DisplayListBoxData(sensorA, listBox_SensorA);
+            DisplayListBoxData(sensorB, listBox_SensorB);
             listView.Items.Clear();
             
             for (int i = 0; i < listBox_SensorA.Items.Count; i++)
@@ -146,9 +152,9 @@ namespace Astronomical_Processing
         private void DisplayListBoxData(LinkedList<double> list, ListBox listBox)
         {
             listBox.Items.Clear() ;
-            for (int i = 0; i < list.Count; i++)
+            foreach (var item in list)
             {
-                listBox.Items.Add(i);
+                listBox.Items.Add(item);
             }
 
         }

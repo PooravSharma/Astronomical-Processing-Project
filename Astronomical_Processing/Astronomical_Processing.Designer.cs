@@ -141,6 +141,7 @@
             this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.column_SensorA,
             this.column_SensorB});
+            this.listView.GridLines = true;
             this.listView.Location = new System.Drawing.Point(26, 104);
             this.listView.Name = "listView";
             this.listView.Size = new System.Drawing.Size(156, 379);
