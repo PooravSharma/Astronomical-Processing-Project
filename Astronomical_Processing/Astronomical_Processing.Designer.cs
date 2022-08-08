@@ -212,6 +212,7 @@
             // 
             this.textBox_ASearchIterative.Location = new System.Drawing.Point(210, 110);
             this.textBox_ASearchIterative.Name = "textBox_ASearchIterative";
+            this.textBox_ASearchIterative.ReadOnly = true;
             this.textBox_ASearchIterative.Size = new System.Drawing.Size(100, 23);
             this.textBox_ASearchIterative.TabIndex = 5;
             this.textBox_ASearchIterative.TextChanged += new System.EventHandler(this.textBox_ASearchIterative_TextChanged);
@@ -239,6 +240,7 @@
             // 
             this.textBox_ASearchRecursive.Location = new System.Drawing.Point(210, 197);
             this.textBox_ASearchRecursive.Name = "textBox_ASearchRecursive";
+            this.textBox_ASearchRecursive.ReadOnly = true;
             this.textBox_ASearchRecursive.Size = new System.Drawing.Size(100, 23);
             this.textBox_ASearchRecursive.TabIndex = 5;
             // 
@@ -265,6 +267,7 @@
             // 
             this.textBox_ASelectionSort.Location = new System.Drawing.Point(210, 342);
             this.textBox_ASelectionSort.Name = "textBox_ASelectionSort";
+            this.textBox_ASelectionSort.ReadOnly = true;
             this.textBox_ASelectionSort.Size = new System.Drawing.Size(100, 23);
             this.textBox_ASelectionSort.TabIndex = 5;
             // 
@@ -291,6 +294,7 @@
             // 
             this.textBox_AInsertionSort.Location = new System.Drawing.Point(210, 431);
             this.textBox_AInsertionSort.Name = "textBox_AInsertionSort";
+            this.textBox_AInsertionSort.ReadOnly = true;
             this.textBox_AInsertionSort.Size = new System.Drawing.Size(100, 23);
             this.textBox_AInsertionSort.TabIndex = 5;
             // 
@@ -317,6 +321,7 @@
             this.listBox_SensorA.ItemHeight = 15;
             this.listBox_SensorA.Location = new System.Drawing.Point(358, 61);
             this.listBox_SensorA.Name = "listBox_SensorA";
+            this.listBox_SensorA.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBox_SensorA.Size = new System.Drawing.Size(107, 424);
             this.listBox_SensorA.TabIndex = 6;
             // 
@@ -409,6 +414,7 @@
             // 
             this.textBox_BSearchIterative.Location = new System.Drawing.Point(492, 110);
             this.textBox_BSearchIterative.Name = "textBox_BSearchIterative";
+            this.textBox_BSearchIterative.ReadOnly = true;
             this.textBox_BSearchIterative.Size = new System.Drawing.Size(100, 23);
             this.textBox_BSearchIterative.TabIndex = 5;
             // 
@@ -416,6 +422,7 @@
             // 
             this.textBox_BSearchRecursive.Location = new System.Drawing.Point(492, 197);
             this.textBox_BSearchRecursive.Name = "textBox_BSearchRecursive";
+            this.textBox_BSearchRecursive.ReadOnly = true;
             this.textBox_BSearchRecursive.Size = new System.Drawing.Size(100, 23);
             this.textBox_BSearchRecursive.TabIndex = 5;
             // 
@@ -431,6 +438,7 @@
             // 
             this.textBox_BSelectionSort.Location = new System.Drawing.Point(492, 342);
             this.textBox_BSelectionSort.Name = "textBox_BSelectionSort";
+            this.textBox_BSelectionSort.ReadOnly = true;
             this.textBox_BSelectionSort.Size = new System.Drawing.Size(100, 23);
             this.textBox_BSelectionSort.TabIndex = 5;
             // 
@@ -438,6 +446,7 @@
             // 
             this.textBox_BInsertionSort.Location = new System.Drawing.Point(492, 431);
             this.textBox_BInsertionSort.Name = "textBox_BInsertionSort";
+            this.textBox_BInsertionSort.ReadOnly = true;
             this.textBox_BInsertionSort.Size = new System.Drawing.Size(100, 23);
             this.textBox_BInsertionSort.TabIndex = 5;
             // 
