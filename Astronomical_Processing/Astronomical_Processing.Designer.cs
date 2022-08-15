@@ -215,7 +215,6 @@
             this.textBox_ASearchIterative.ReadOnly = true;
             this.textBox_ASearchIterative.Size = new System.Drawing.Size(100, 23);
             this.textBox_ASearchIterative.TabIndex = 5;
-        
             // 
             // label_ASearchRecursive
             // 
@@ -456,6 +455,7 @@
             this.listBox_SensorB.ItemHeight = 15;
             this.listBox_SensorB.Location = new System.Drawing.Point(640, 61);
             this.listBox_SensorB.Name = "listBox_SensorB";
+            this.listBox_SensorB.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBox_SensorB.Size = new System.Drawing.Size(107, 424);
             this.listBox_SensorB.TabIndex = 6;
             // 
