@@ -1,11 +1,13 @@
+//Poorav Sharma
+//30045900
+//This application is a Satellite Data Processing Project for an organisation called Malin Space Science Systems (MSSS)
 using Galileo;
 using System.Diagnostics;
 
 namespace Astronomical_Processing
 {
     public partial class Astronomical_Processing : Form
-    {
-        Stopwatch stopWatch = new Stopwatch();
+    {       
         public Astronomical_Processing()
         {
             InitializeComponent();
@@ -41,6 +43,7 @@ namespace Astronomical_Processing
         #region Search Buttons
         private void button_ASearchIterative_Click(object sender, EventArgs e)
         {
+            Stopwatch stopWatch = new Stopwatch();
             InsertionSort(numAnord(), sensorA);
             DisplayListBoxData(sensorA, listBox_SensorA);
             if (!string.IsNullOrEmpty(textBox_ATarget.Text))
@@ -60,7 +63,8 @@ namespace Astronomical_Processing
         }
 
         private void button_BSearchIterative_Click(object sender, EventArgs e)
-        { 
+        {
+            Stopwatch stopWatch = new Stopwatch();
             InsertionSort(numBnord(), sensorB);
             DisplayListBoxData(sensorB, listBox_SensorB);
             if (!string.IsNullOrEmpty(textBox_BTarget.Text))
@@ -79,6 +83,7 @@ namespace Astronomical_Processing
 
         private void button_ASearchRecursive_Click(object sender, EventArgs e)
         {
+            Stopwatch stopWatch = new Stopwatch();
             SelectionSort(numAnord(), sensorA);
             DisplayListBoxData(sensorA, listBox_SensorA);
             if (!string.IsNullOrEmpty(textBox_ATarget.Text))
@@ -98,6 +103,7 @@ namespace Astronomical_Processing
 
         private void button_BSearchRecursive_Click(object sender, EventArgs e)
         {
+            Stopwatch stopWatch = new Stopwatch();
             SelectionSort(numBnord(), sensorB);
             DisplayListBoxData(sensorB, listBox_SensorB);
             if (!string.IsNullOrEmpty(textBox_BTarget.Text))
@@ -125,6 +131,7 @@ namespace Astronomical_Processing
         #region Sort Buttons
         private void button_ASelectionSort_Click(object sender, EventArgs e)
         {
+            Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             SelectionSort(numAnord(), sensorA);
             stopWatch.Stop();
@@ -135,6 +142,7 @@ namespace Astronomical_Processing
 
         private void button_BSelectionSort_Click(object sender, EventArgs e)
         {
+            Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             SelectionSort(numBnord(), sensorB);
             stopWatch.Stop();
@@ -144,6 +152,7 @@ namespace Astronomical_Processing
 
         private void button_AInsertionSort_Click(object sender, EventArgs e)
         {
+            Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             InsertionSort(numAnord(), sensorA);
             stopWatch.Stop();
@@ -154,7 +163,7 @@ namespace Astronomical_Processing
 
         private void button_BInsertionSort_Click(object sender, EventArgs e)
         {
-
+            Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             InsertionSort(numBnord(), sensorB);
             stopWatch.Stop();
