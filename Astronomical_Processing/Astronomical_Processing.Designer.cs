@@ -215,7 +215,7 @@
             this.textBox_ASearchIterative.ReadOnly = true;
             this.textBox_ASearchIterative.Size = new System.Drawing.Size(100, 23);
             this.textBox_ASearchIterative.TabIndex = 5;
-            this.textBox_ASearchIterative.TextChanged += new System.EventHandler(this.textBox_ASearchIterative_TextChanged);
+        
             // 
             // label_ASearchRecursive
             // 
